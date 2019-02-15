@@ -1,0 +1,172 @@
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.flex-grow-2 {
+	flex-grow: 2;
+}
+.flex-grow-3 {
+	flex-grow: 3;
+}
+.btn-grad {
+	margin: 10px;
+	padding: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 100% auto;
+	color: white;
+	border-radius: 10px !important;
+}
+
+.btn-with-icon {
+	position: relative;
+	button {
+		position: absolute;
+		right: 0;
+		padding: 0;
+		margin: 0;
+		top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 36px;
+		border-radius: 100%;
+		background-image: linear-gradient(to right, #1fd57c 0%, #19bec6 100%) !important;
+	}
+}
+
+.detail-page {
+	background: #17163b;
+	padding-top: 70px;
+	padding-bottom: 100px;
+
+	.dota2-rate, .fortnite-rate {
+		position: absolute;
+		.rate-wrapper {
+			margin-top: 3px;
+			text-align: left;
+			span {
+				height: 18px;
+				width: 3px;
+				background: white;
+				display: inline-block;
+				margin-left: 3px;
+			}
+		}
+		.vote-text {
+			color: white;
+			font-size: 0.8em;
+			margin-left: 3px;
+			strong {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.dota2-rate {
+		top: 10px;
+		left: 20px;
+		i {
+			background: -webkit-linear-gradient(45deg,  #ff409b 0%, #c538ef 100%);
+  	  background-clip: text;
+    	-webkit-text-fill-color: transparent;
+		}
+		.rate-wrapper {
+			span {
+				&.active {
+					background-image: linear-gradient(to right, #ff409b 0%, #c538ef 100%) !important;
+				}
+			}
+		}
+	}
+
+	.fortnite-rate {
+		bottom: 10px;
+		right: 20px;
+		i {
+			background: -webkit-linear-gradient(45deg,  #3ad8fb 0%, #0c9ccb 100%);
+  	  background-clip: text;
+    	-webkit-text-fill-color: transparent;
+		}
+		.rate-wrapper {
+			span {
+				&.active {
+					background-image: linear-gradient(to right, #3ad8fb 0%, #0c9ccb 100%) !important;
+				}
+			}
+		}
+	}
+	.detail-feed-content {
+		color: #464576;
+		text-align: left;
+		text-overflow: ellipsis;
+		height: 5em;
+		overflow: hidden;
+	}
+	.detail-feed {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 20px;
+		font-size: 0.8em;
+		.time {
+			color: #7070aa;
+		}
+		.alias {
+			color: #47c3ad;
+		}
+		.tool {
+			background: transparent;
+			box-shadow: none;
+			padding: 0;
+			color: #5684c7;
+		}
+	}
+	.detail-vote {
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+
+	.round-box {
+		border-radius: 10em;
+		background-color: #272358;
+		padding: 5px 10px;
+		position: relative;
+	}
+
+	.detail-comment {
+		background: #1e1d44;
+		padding: 10px 0;
+		font-size: 0.8em;
+		color: #50e3c2;
+		input {
+			border: none;
+			background: transparent;
+			color: white;
+		}
+
+		.input-name {
+			color: #50e3c2;
+		}
+		.input-comment {
+			width: 100%;
+		}
+
+	}
+	.btn-dota2 {
+		background-image: linear-gradient(to right, #ff409b 0%, #c538ef 100%)
+	}
+	.btn-dota2:hover, .btn-dota2:active { 
+		// background-position: right center; 
+		background-image: linear-gradient(to right, #ff409b 0%, #c538ef 100%) !important;
+	}
+	.btn-fortnite {
+		background-image: linear-gradient(to right, #3ad8fb 0%, #0c9ccb 100%)
+	}
+	.btn-fortnite:hover, .btn-fortnite:active { 
+		// background-position: right center; 
+		background-image: linear-gradient(to right, #3ad8fb 0%, #0c9ccb 100%) !important;
+	}
+
+	
+}
+

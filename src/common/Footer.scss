@@ -1,0 +1,27 @@
+.footer-section {
+	.nav-pills .nav-item i {
+		padding: 0 !important;
+	}
+	.nav {
+		background-color: #272358 !important;
+		color: #61609a;
+	}
+
+	.nav-pills .nav-item .nav-link {
+		font-size: 0.7em;
+		min-width: unset;
+		color: #61609a;
+		padding: 8px 0;
+		text-transform: initial;
+	}
+	.nav-pills .nav-item .nav-link.active {
+		background: none;
+		background: -webkit-linear-gradient(45deg, #22e541, #18a3da 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+	}
+
+	.nav-pills .nav-item .nav-link:hover {
+		background-color: transparent;
+	}
+}

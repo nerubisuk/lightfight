@@ -1,0 +1,31 @@
+.header-color {
+	background-color: #272358 !important;
+	color: white;
+}
+
+.arrow-color {
+	color: #12b6f5;
+}
+.nav-title-wrapper {
+	text-align: left;
+	.nav-title {
+		font-size: 1em;
+		span {
+			font-weight: bold;
+			background: -webkit-linear-gradient(45deg, #22e541, #18a3da 80%);
+    	background-clip: text;
+    	-webkit-text-fill-color: transparent;
+		}
+		
+	}
+	.nav-time {
+		text-align: left;
+		font-size: 0.7em;
+		color: #59588d;
+		line-height: 12px;
+		i {
+			font-size: 1em; margin-right: 10px;
+		}
+	}
+
+}
