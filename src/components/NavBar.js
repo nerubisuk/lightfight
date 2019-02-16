@@ -19,7 +19,7 @@ const tabs = [
     icon: "star"
   },
   {
-    title: "Start New Fight",
+    title: "New Fight",
     icon: "plus"
   },
   {
