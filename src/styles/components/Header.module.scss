@@ -6,8 +6,8 @@
   height: 84px;
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
-  padding: 0 10px;
+  align-items: start;
+  padding: 20px 10px;
 
   div:first-child {
     display: grid;
