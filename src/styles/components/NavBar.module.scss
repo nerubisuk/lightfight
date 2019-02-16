@@ -1,0 +1,43 @@
+@import '../colors.scss';
+
+.wrapper {
+  height: 72px;
+  background-color: $port-gore;
+  color: $scampi;
+  font-size: 11px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  svg {
+    width: 19px;
+    height: 19px;
+    fill: $scampi;
+    display: block;
+    margin: 0 auto 7px;
+    transition: fill .2s ease-out;
+  }
+
+  div {
+    cursor: pointer;
+    transition: color .2s ease-out;
+
+    &:hover {
+      color: $turquoise;
+
+      svg {
+        fill: $simple-grey;
+      }
+    }
+  }
+
+  .active {
+    color: $turquoise;
+
+    svg {
+      fill: $simple-grey;
+    }
+  }
+}
