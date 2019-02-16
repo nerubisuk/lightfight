@@ -1,0 +1,27 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Questrial", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #root, .App {
+    width: inherit;
+    height: inherit;
+  }
+}
