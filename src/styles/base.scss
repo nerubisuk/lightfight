@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -12,6 +13,26 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  ::-webkit-input-placeholder {
+    color: $scampi;
+  }
+
+  ::-moz-placeholder {
+    color: $scampi;
+  }
+
+  :-ms-input-placeholder {
+    color: $scampi;
+  }
+
+  :-moz-placeholder {
+    color: $scampi;
+  }
+
+  ::placeholder {
+    color: $scampi; 
+  }
 
   button {
     background: none;
