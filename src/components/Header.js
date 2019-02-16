@@ -1,0 +1,31 @@
+/**
+ * @file Holds the <Header> component
+ * @since 0.1.0
+ * @author Anton Komarenko <mi3ta@sent.as>
+ */
+import React from 'react';
+import Icon from './Icon';
+import styles from '../styles/components/Header.module.scss';
+
+/* Component definition */
+const Header = () =>
+  <header className={styles.wrapper}>
+    <div>
+      <button>
+        <Icon name="arrow-left" className={styles.icon_arrow} />
+      </button>
+      <h1>
+        DOTA 2 VS FORTNITE
+        <span>
+          <Icon name="clock" className={styles.icon_clock} />
+          09:54:26 remaining to vote
+        </span>
+      </h1>
+    </div>
+    <div>
+      <button><Icon name="share" className={styles.icon_share} /></button>
+      <button><Icon name="menu" className={styles.icon_menu} /></button>
+    </div>
+  </header>;
+
+export default Header; 
