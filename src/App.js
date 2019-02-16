@@ -1,18 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './common/Header';
-import Detail from './pages/Detail/Detail';
-import Footer from './common/Footer';
+import React from 'react';
+import './styles/base.scss';
 
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Detail />
-        <Footer />
-      </div>
+      <div className="App">App</div>
     );
   }
 }
