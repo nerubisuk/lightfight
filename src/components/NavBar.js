@@ -30,7 +30,7 @@ const tabs = [
 
 /* Component definition */
 const NavBar = () =>
-  <div className={styles.wrapper}>
+  <footer className={styles.wrapper}>
     {
       tabs.map((item, index) => 
         <div className={item.isActive && styles.active} key={index}>
@@ -39,6 +39,6 @@ const NavBar = () =>
         </div>
       )
     }
-  </div>;
+  </footer>;
 
 export default NavBar;
