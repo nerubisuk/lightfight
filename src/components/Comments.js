@@ -4,32 +4,18 @@
  * @author Anton Komarenko <mi3ta@sent.as>
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../styles/components/Comments.module.scss';
 import Icon from './Icon';
 
 /* Component definition */
 class Comments extends React.Component {
-  state = {
-    comments: [
-      {
-        name: "Bloomberg",
-        timestamp: "3 hrs ago",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
-      },
-      {
-        name: "Gamerlight",
-        timestamp: "7 hrs ago",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
-      }
-    ]
-  }
-
   handleSubmit = e => {
     e.preventDefault();
   }
 
   render() {
-    const { comments } = this.state;
+    const { comments } = this.props;
 
     return <div className={styles.wrapper}>
       <form onSubmit={this.handleSubmit} className={styles.header}>
@@ -58,6 +44,11 @@ class Comments extends React.Component {
       </section>
     </div>
   }
+}
+
+/* Prop types definition */
+Comments.propTypes = {
+  comments: PropTypes.array.isRequired
 }
 
 export default Comments;
