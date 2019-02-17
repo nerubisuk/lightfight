@@ -2,11 +2,13 @@
   "rivals": [
     {
       "name": "Dota 2",
-      "image": "/images/dota.jpg"
+      "image": "/images/dota.jpg",
+      "vote": "2.8k"
     },
     {
       "name": "Fortnite",
-      "image": "/images/fortnite.jpg"
+      "image": "/images/fortnite.jpg",
+      "vote": "6k"
     }
   ],
 
