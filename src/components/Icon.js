@@ -18,7 +18,7 @@ const Icon = ({ className, name }) => (
 /* PropTypes definition */
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.any,
 };
 
 export default Icon;
