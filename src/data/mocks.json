@@ -1,0 +1,23 @@
+{
+  "rivals": [
+    {
+      "name": "Dota 2"
+    },
+    {
+      "name": "Fortnite"
+    }
+  ],
+
+  "comments": [
+    {
+      "name": "Bloomberg",
+      "timestamp": "3 hrs ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
+    },
+    {
+      "name": "Gamerlight",
+      "timestamp": "7 hrs ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
+    }
+  ]
+}
