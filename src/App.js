@@ -13,9 +13,9 @@ class App extends React.Component {
       <>
         <Header rivals={data.rivals} />
         <main>
-          <Versus />
-          <VoteButtons rivals={data.rivals}/>
-          <Comments comments={data.comments}/>
+          <Versus rivals={data.rivals} />
+          <VoteButtons rivals={data.rivals} />
+          <Comments comments={data.comments} />
         </main>
         <NavBar />
       </>
