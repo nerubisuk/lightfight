@@ -5,27 +5,17 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Howl } from 'howler';
 import styles from '../styles/components/VoteButtons.module.scss';
 
 /* Component definition */
-const VoteButtons = ({ rivals }) => {
-  const handleClick = () => {
-    const click = new Howl({
-      src: ['/sounds/click.mp3', '/sounds/click.ogg']
-    });
-
-    const hover = new Howl({
-      src: ['/sounds/hover.mp3', '/sounds/hover.ogg']
-    })
-
-    click.play();
-    hover.play();
+const VoteButtons = ({ rivals, onVote }) => {
+  const handleClick = rivalID => {
+    onVote(rivalID);
   }
 
   return <div className={styles.wrapper}>
-    <button onClick={handleClick}>{rivals[0].name}</button>
-    <button onClick={handleClick}>{rivals[1].name}</button>
+    <button onClick={handleClick.bind(this, 0)}>{rivals[0].name}</button>
+    <button onClick={handleClick.bind(this, 1)}>{rivals[1].name}</button>
   </div>
 }
 
