@@ -8,6 +8,36 @@
   overflow: hidden;
   background-color: $flat-white;
 
+  .icon_upvote_1, .icon_upvote_2 {
+    position: absolute;
+    z-index: 99;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon_upvote_1 {
+    right: 10%;
+    top: 5%;
+
+    @media (min-width: 600px) {
+      right: unset;
+      top: unset;
+      left: 10%;
+      bottom: 10%;
+    }
+  }
+
+  .icon_upvote_2 {
+    left: 10%;
+    bottom: 5%; 
+
+    @media (min-width: 600px) {
+      right: 10%;
+      left: unset;
+      top: 5%;
+    }
+  }
+
   .slide_in_blurred_top {
     animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 
@@ -30,7 +60,7 @@
   }
 
   .slide_out_top {
-    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
   .puff_out_center {
@@ -60,11 +90,11 @@
   }
 
   .rival_2 {
-    bottom: 35px;
-    right: 25px;
+    bottom: 10%;
+    right: 5%;
 
     @media (min-width: 600px) {
-      bottom: 100px;
+      bottom: 10%;
     }
 
     em {
@@ -145,7 +175,7 @@
     @media (min-width: 600px) { 
       top: 0;
       bottom: 0;
-      right: 0%;
+      right: 0;
       clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0 101%, 18% 100%, 7% 79%, 19% 68%, 6% 50%, 19% 37%, 8% 22%, 13% 12%);
     }
 
