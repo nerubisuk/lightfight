@@ -3,12 +3,12 @@
     {
       "name": "Dota 2",
       "image": "/images/dota.jpg",
-      "votes": "2.8k"
+      "votes": 0
     },
     {
       "name": "Fortnite",
       "image": "/images/fortnite.jpg",
-      "votes": "6k"
+      "votes": 0
     }
   ],
 
