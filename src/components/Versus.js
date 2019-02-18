@@ -14,7 +14,8 @@ class Versus extends React.Component {
   state = {
     rival_1_anim: null,
     rival_2_anim: null,
-    icon_versus_anim: null
+    icon_versus_anim: null,
+    upvote: null
   }
 
   componentDidMount() {
@@ -31,18 +32,42 @@ class Versus extends React.Component {
     }, 2200)
   }
 
+  resetUpvote = () => {
+  }
+
+  componentDidUpdate(prevProps) {
+    prevProps.rivals.forEach((rival, index) => {
+      if (this.props.rivals[index].votes !== prevProps.rivals[index].votes) {
+        this.setState({
+          upvote: index
+        }, () =>
+          this.setState({
+            upvote: null
+          })
+        )
+      }
+    })
+  }
+
   render() {
-    const { rivals } = this.props;
+    const { rivals } = this.props,
+      { upvote } = this.state;
 
     return <div className={styles.wrapper}>
       <div className={this.state.rival_1_anim}>
         <VoteProgress rival={rivals[0]} className={styles.rival_1}/>
         <img src={rivals[0].image} alt="first" />
+
+        {upvote !== 0 && <Icon
+          name="upvote" 
+          className={[`${styles.icon_upvote_1} ${styles.puff_out_center}`]} 
+        />}
       </div>
       <Icon name="versus" className={[`${styles.icon_versus} ${this.state.icon_versus_anim}`]} />
       <div className={this.state.rival_2_anim}>
         <VoteProgress rival={rivals[1]} className={styles.rival_2}/>
         <img src={rivals[1].image} alt="second" />
+        {upvote !== 1 && <Icon name="upvote" className={[`${styles.icon_upvote_2} ${styles.puff_out_center}`]} />}
       </div>
     </div>
   }
