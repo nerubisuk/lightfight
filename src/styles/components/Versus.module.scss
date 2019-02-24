@@ -9,7 +9,7 @@
   background-color: $flat-white;
 
   @media (min-width: 600px) {
-    height: calc(100% - 50px);
+    height: calc(100% - 107px);
   }
 
   .icon_upvote_1, .icon_upvote_2 {
@@ -138,8 +138,8 @@
     }
 
     @media (min-width: 600px) {
-      height: inherit;
-      width: 56%;
+      height: 100%;
+      width: 50%;
     }
 
     img {
@@ -156,8 +156,8 @@
 
     @media (min-width: 600px) { 
       top: 0;
-      left: -2%;
-      clip-path: polygon(53% 0, 0 0, 0 100%, 100% 100%, 88% 79%, 100% 68%, 87% 50%, 100% 37%, 89% 22%, 100% 0);
+      left: 0;
+      clip-path: polygon(53% 0, 0 0, 0 100%, 100% 100%, 96% 84%, 100% 68%, 96% 50%, 100% 36%, 96% 22%, 100% 0);
     }
     
     &:before {
@@ -180,7 +180,7 @@
       top: 0;
       bottom: 0;
       right: 0;
-      clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0 101%, 18% 100%, 7% 79%, 19% 68%, 6% 50%, 19% 37%, 8% 22%, 13% 12%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 4% 100%, 0% 84%, 4% 67%, 0% 51%, 4% 37%, 0% 22%, 4% 0%);
     }
 
     &:before {
