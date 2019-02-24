@@ -9,6 +9,7 @@ import Header from './components/Header';
 import VoteButtons from './components/VoteButtons';
 import Comments from './components/Comments';
 import Versus from './components/Versus';
+import Popup from './components/Popup';
 import { Howl } from 'howler';
 import data from './data/mocks.json';
 import './styles/base.scss';
@@ -20,7 +21,9 @@ class App extends React.Component {
     comments: data.comments,
     sounds: {
       click: null
-    }
+    },
+    isPopup: false,
+    isPaid: false
   }
 
   componentDidMount() {
@@ -50,24 +53,37 @@ class App extends React.Component {
   }
 
   handleVoteClick = rivalID => {
-    this.handlePlaySound('click');
-    this.handleUpvote(rivalID);
+    if (!this.state.isPaid) {
+      this.handleTogglePopup();
+    } else {
+      this.handlePlaySound('click');
+      this.handleUpvote(rivalID);
+    }
+  }
+
+  handleTogglePopup = () => {
+    this.setState({
+      isPopup: !this.state.isPopup
+    })
   }
 
   render() {
-    const { rivals, comments } = this.state
+    const { rivals, comments, isPopup } = this.state
 
     return (
       <React.Fragment>
         <Header rivals={rivals} />
-        <main>
-          <Versus rivals={rivals} />
-          <VoteButtons 
-            rivals={rivals} 
-            onVote={this.handleVoteClick}
-          />
-          <Comments comments={comments} />
-        </main>
+        { 
+          isPopup ? <Popup onTogglePopup={this.handleTogglePopup} />
+          : <main>
+              <Versus rivals={rivals} />
+              <VoteButtons 
+                rivals={rivals} 
+                onVote={this.handleVoteClick}
+              />
+              <Comments comments={comments} />
+            </main>
+        }
         <NavBar />
       </React.Fragment>
     );
