@@ -13,6 +13,7 @@ import Popup from './components/Popup';
 import { Howl } from 'howler';
 import data from './data/mocks.json';
 import './styles/base.scss';
+import moment from 'moment';
 
 /* Component definition */
 class App extends React.Component {
@@ -23,7 +24,8 @@ class App extends React.Component {
       click: null
     },
     isPopup: false,
-    isPaid: false
+    isPaid: false,
+    countdown: null
   }
 
   componentDidMount() {
@@ -36,6 +38,21 @@ class App extends React.Component {
         click: clickSound
       }
     })
+
+    this.setCountDown();
+  }
+
+  setCountDown() {
+    const end = moment().endOf('day'); 
+
+    setInterval(() => {
+      const timeLeft = moment(end.diff(moment())); // get difference between now and timestamp
+      const countdown = timeLeft.format('HH:mm:ss'); // make pretty
+
+      this.setState({
+        countdown
+      });
+    }, 1000);
   }
 
   handleUpvote = rivalID => {
@@ -44,7 +61,8 @@ class App extends React.Component {
     rivalsCopy[rivalID].votes += 1;
 
     this.setState({
-      rivals: rivalsCopy
+      rivals: rivalsCopy,
+      // isPaid: false
     });
   }
 
@@ -67,14 +85,22 @@ class App extends React.Component {
     })
   }
 
+  handlePaid = () => {
+    this.handleTogglePopup();
+
+    this.setState({
+      isPaid: true
+    }) 
+  }
+
   render() {
-    const { rivals, comments, isPopup } = this.state
+    const { rivals, comments, isPopup, countdown } = this.state
 
     return (
       <React.Fragment>
-        <Header rivals={rivals} />
+        <Header rivals={rivals} countdown={countdown} />
         { 
-          isPopup ? <Popup onTogglePopup={this.handleTogglePopup} />
+          isPopup ? <Popup onTogglePopup={this.handleTogglePopup} onPaid={this.handlePaid} />
           : <main>
               <Versus rivals={rivals} />
               <VoteButtons 
