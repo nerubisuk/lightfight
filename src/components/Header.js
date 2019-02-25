@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import styles from '../styles/components/Header.module.scss';
 
 /* Component definition */
-const Header = ({ rivals }) =>
+const Header = ({ rivals, countdown }) =>
   <header className={styles.wrapper}>
     <div>
       <button>
@@ -19,7 +19,7 @@ const Header = ({ rivals }) =>
         {rivals[0].name} VS {rivals[1].name}
         <span>
           <Icon name="clock" className={styles.icon_clock} />
-          09:54:26 remaining to vote
+          { countdown } remaining to vote
         </span>
       </h1>
     </div>
@@ -31,6 +31,7 @@ const Header = ({ rivals }) =>
 
 /* Prop types definition */
 Header.propTypes = {
-  rivals: PropTypes.array.isRequired
+  rivals: PropTypes.array.isRequired,
+  countdown: PropTypes.any
 }
 export default Header; 
