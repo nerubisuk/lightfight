@@ -9,15 +9,21 @@ import PropTypes from 'prop-types';
 import styles from '../styles/components/VoteProgress.module.scss';
 
 /* Component definition */
-const VoteProgress = ({ rival, className }) => 
-  <section className={[`${styles.wrapper} ${className}`]}>
+const VoteProgress = ({ rival, className }) => {
+  const style = {
+    width: `${rival.votes}px`,
+  }
+
+  return <section className={[`${styles.wrapper} ${className}`]}>
     <Icon name="heart" className={styles.heart_icon} />
     <p>
       <em className={styles.progress} />
+      <em className={styles.progress_overlay} style={style} />
       { rival.name }
       <span>{ rival.votes } upvotes</span>
     </p>
-  </section>;
+  </section>
+};
 
 /* Prop types definition */
 VoteProgress.propTypes = {
