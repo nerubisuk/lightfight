@@ -25,7 +25,8 @@ class App extends React.Component {
     },
     isPopup: false,
     isPaid: false,
-    countdown: null
+    countdown: null,
+    rivalID: null
   }
 
   componentDidMount() {
@@ -62,7 +63,8 @@ class App extends React.Component {
 
     this.setState({
       rivals: rivalsCopy,
-      // isPaid: false
+      isPaid: false,
+      rivalID: null
     });
   }
 
@@ -73,10 +75,14 @@ class App extends React.Component {
   handleVoteClick = rivalID => {
     if (!this.state.isPaid) {
       this.handleTogglePopup();
-    } else {
-      this.handlePlaySound('click');
-      this.handleUpvote(rivalID);
-    }
+
+      this.setState({
+        rivalID
+      })
+    } // else {
+      // this.handlePlaySound('click');
+      // this.handleUpvote(rivalID);
+    // }
   }
 
   handleTogglePopup = () => {
@@ -85,12 +91,15 @@ class App extends React.Component {
     })
   }
 
-  handlePaid = () => {
+  handlePaid = ()  => {
     this.handleTogglePopup();
 
     this.setState({
       isPaid: true
-    }) 
+    })
+
+    this.handlePlaySound('click');
+    this.handleUpvote(this.state.rivalID);
   }
 
   render() {
@@ -98,18 +107,20 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <Header rivals={rivals} countdown={countdown} />
-        { 
-          isPopup ? <Popup onTogglePopup={this.handleTogglePopup} onPaid={this.handlePaid} />
-          : <main>
-              <Versus rivals={rivals} />
-              <VoteButtons 
-                rivals={rivals} 
-                onVote={this.handleVoteClick}
-              />
-              <Comments comments={comments} />
-            </main>
+        {
+          isPopup && 
+          <Popup onTogglePopup={this.handleTogglePopup} onPaid={this.handlePaid} />
         }
+
+        <Header rivals={rivals} countdown={countdown} />
+          <main>
+            <Versus rivals={rivals} />
+            <VoteButtons 
+              rivals={rivals} 
+              onVote={this.handleVoteClick}
+            />
+            <Comments comments={comments} />
+          </main>
         <NavBar />
       </React.Fragment>
     );
