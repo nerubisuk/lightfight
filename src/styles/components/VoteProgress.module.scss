@@ -1,0 +1,43 @@
+@import '../colors.scss';
+
+.wrapper {
+  color: $flat-white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 10px;
+
+  span {
+    margin-left: 10px;
+    font-size: 10px;
+    text-transform: none;
+  }
+
+  p {
+    position: relative;
+  }
+
+  .progress {
+    position: relative;
+    height: 15px;
+    width: 130px;
+    display: block;
+    margin-bottom: 5px;
+    background: repeating-linear-gradient(90deg, white, white 4px, #46529800 0px, #46529800 9px)!important;
+  }
+
+  .progress_overlay {
+    position: absolute;
+    height: 15px;
+    width: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .heart_icon {
+    width: 18px;
+    height: 18px;
+  }
+}

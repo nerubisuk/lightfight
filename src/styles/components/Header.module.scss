@@ -1,0 +1,64 @@
+@import '../colors';
+
+.wrapper {
+  color: $turquoise;
+  background-color: $port-gore;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding: 15px 10px;
+
+  div:first-child {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  div:last-child {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    span {
+      color: $waikawa-grey;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: none;
+      display: grid;
+      margin-top: 5px;
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 5px;
+    }
+  }
+
+  .icon_clock {
+    fill: $waikawa-grey;
+    width: 12px;
+    height: 12px;
+  }
+
+  .icon_arrow {
+    width: 30px;
+    height: 30px;
+    fill: $lighter-blue;
+  }
+
+  .icon_share {
+    width: 20px;
+    height: 20px;
+    fill: $lighter-blue; 
+  }
+
+  .icon_menu {
+    width: 20px;
+    height: 20px;
+    fill: $lighter-blue; 
+  }
+}

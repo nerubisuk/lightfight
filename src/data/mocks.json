@@ -1,0 +1,32 @@
+{
+  "rivals": [
+    {
+      "name": "Dota 2",
+      "image": "/images/dota.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Fortnite",
+      "image": "/images/fortnite.jpg",
+      "votes": 0
+    }
+  ],
+
+  "comments": [
+    {
+      "name": "Tony",
+      "timestamp": "3 hrs ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
+    },
+    {
+      "name": "Bloomberg",
+      "timestamp": "7 hrs ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
+    },
+    {
+      "name": "Gamerlight",
+      "timestamp": "9 hrs ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloret."
+    }
+  ]
+}
